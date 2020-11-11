@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import { FormControl, FormControlLabel, FormLabel } from "@material-ui/core";
+import "./style.css";
 export function LoggedIn(props) {
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
@@ -42,7 +43,7 @@ export function LoggedIn(props) {
       <Paper elevation={3} style={{ padding: 40, display: "block", margin: 20 }}>
         <h3>Calculator</h3>
         <TextField
-          style={{ marginTop: 10 }}
+          className="element"
           id="num1"
           label="Number"
           required
@@ -54,7 +55,7 @@ export function LoggedIn(props) {
             setNum1(parseFloat(e.target.value));
           }}
         />
-        <FormControl component="fieldset" style={{ marginTop: 20 }}>
+        <FormControl component="fieldset" className="element">
           <FormLabel component="legend">Operation</FormLabel>
           <RadioGroup
             row
@@ -71,7 +72,7 @@ export function LoggedIn(props) {
           </RadioGroup>
         </FormControl>
         <TextField
-          style={{ marginTop: 10 }}
+          className="element"
           id="num2"
           label="Number"
           required
@@ -85,7 +86,7 @@ export function LoggedIn(props) {
         />
 
         <Button
-          style={{ marginTop: 10 }}
+          className="element"
           variant="contained"
           color="primary"
           fullWidth
@@ -95,15 +96,7 @@ export function LoggedIn(props) {
         >
           Calculate
         </Button>
-        <TextField
-          style={{ marginTop: 20 }}
-          label="Result"
-          variant="outlined"
-          value={result}
-          id="result"
-          fullWidth
-          disabled
-        />
+        <TextField className="result" label="Result" variant="outlined" value={result} id="result" fullWidth disabled />
       </Paper>
     </div>
   );
