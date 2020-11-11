@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## User Credentials
+### Username: abc@xyz.com
+### Password: abcxyz
+
+## Login Page Snap
+![Login](https://i.imgur.com/1h60LFI.jpg)
+## Calculator Page Snap
+![Calculator](https://i.imgur.com/gKK7e58.jpg)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
