@@ -3,8 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## User Credentials
-###Username: abc@xyz.com
-###Password: abcxyz
+### Username: abc@xyz.com
+### Password: abcxyz
 
 ## Login Page Snap
 ![Login](https://i.imgur.com/1h60LFI.jpg)
