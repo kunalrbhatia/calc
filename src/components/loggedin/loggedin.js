@@ -4,13 +4,15 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
-import { FormControl, FormControlLabel, FormLabel } from "@material-ui/core";
+import { FormControl, FormControlLabel, FormLabel, Snackbar } from "@material-ui/core";
 import "./style.css";
 export function LoggedIn(props) {
   const [num1, setNum1] = useState(10);
   const [num2, setNum2] = useState(5);
   const [operation, setOperation] = useState("add");
   const [result, setResult] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [message, setMessage] = useState("");
   let calculate = (action) => {
     switch (action) {
       case "add":
@@ -35,7 +37,11 @@ export function LoggedIn(props) {
         color="primary"
         style={{ right: 30, float: "right", top: 30 }}
         onClick={(e) => {
-          props.history.push("/");
+          setOpen(true);
+          setMessage("Logging you out ...");
+          setTimeout(() => {
+            props.history.push("/");
+          }, 2000);
         }}
       >
         Logout
@@ -101,6 +107,19 @@ export function LoggedIn(props) {
         </Button>
         <TextField className="result" label="Result" variant="outlined" value={result} id="result" fullWidth disabled />
       </Paper>
+      <Snackbar
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "left",
+        }}
+        open={open}
+        onClose={(e) => {
+          setTimeout(() => {
+            setOpen(false);
+          }, 2000);
+        }}
+        message={message}
+      ></Snackbar>
     </div>
   );
 }

@@ -9,16 +9,21 @@ export function Login(props) {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
   let submit = () => {
-    if (email === "abc@xyz.com" && password === "abcxyz") {
-      setTimeout(() => {
-        props.history.push("in");
-      }, 2000);
-      setOpen(true);
-      setMessage("Logging you in ...");
-    } else {
-      setOpen(true);
-      setMessage("Invalid username or password");
-    }
+    setTimeout(() => {
+      let usercredentials = { email: "abc@xyz.com", password: "abcxyz" };
+      if (email === usercredentials.email && password === usercredentials.password) {
+        setTimeout(() => {
+          props.history.push("in");
+        }, 2000);
+        setOpen(true);
+        setMessage("Logging you in ...");
+      } else {
+        setOpen(true);
+        setMessage("Invalid username or password");
+      }
+    }, 3000);
+    setOpen(true);
+    setMessage("Processing...");
   };
   return (
     <div style={{ margin: "auto", padding: "10px" }}>
