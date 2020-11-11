@@ -7,8 +7,8 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import { FormControl, FormControlLabel, FormLabel } from "@material-ui/core";
 import "./style.css";
 export function LoggedIn(props) {
-  const [num1, setNum1] = useState(0);
-  const [num2, setNum2] = useState(0);
+  const [num1, setNum1] = useState(10);
+  const [num2, setNum2] = useState(5);
   const [operation, setOperation] = useState("add");
   const [result, setResult] = useState(0);
   let calculate = (action) => {
@@ -43,6 +43,7 @@ export function LoggedIn(props) {
       <Paper elevation={3} style={{ padding: 40, display: "block", margin: 20 }}>
         <h3>Calculator</h3>
         <TextField
+          value={num1}
           className="element"
           id="num1"
           label="Number"
@@ -61,6 +62,7 @@ export function LoggedIn(props) {
             row
             aria-label="position"
             name="position"
+            value={operation}
             onChange={(e) => {
               setOperation(e.target.value);
             }}
@@ -74,6 +76,7 @@ export function LoggedIn(props) {
         <TextField
           className="element"
           id="num2"
+          value={num2}
           label="Number"
           required
           placeholder="Number"
