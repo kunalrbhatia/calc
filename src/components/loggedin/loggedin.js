@@ -4,6 +4,7 @@ import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
+import { Counter } from "../counter/counter";
 import { FormControl, FormControlLabel, FormLabel, Snackbar } from "@material-ui/core";
 import "./style.css";
 export function LoggedIn(props) {
@@ -32,6 +33,9 @@ export function LoggedIn(props) {
   };
   return (
     <div style={{ margin: "auto", padding: "10px" }}>
+      <div style={{ margin: "auto", paddingTop: 10, paddingLeft: 30, float: "left", top: 30 }}>
+        <Counter history={props.history} />
+      </div>
       <Button
         variant="contained"
         color="primary"
