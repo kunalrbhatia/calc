@@ -6,7 +6,7 @@ Calculator application that will perform the calculation on any two given number
 ### Password: abcxyz
 
 ## Login Page Snap
-![Login](https://i.imgur.com/1h60LFI.jpg)
+![Login](https://i.imgur.com/Q5u1He2.png)
 ## Calculator Page Snap
 ![Calculator](https://i.imgur.com/gKK7e58.jpg)
 
